@@ -1,0 +1,20 @@
+.app {
+    padding: 6rem 2rem 0rem 2rem;
+    margin: auto;
+    background-color: #000;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.app-container {
+    z-index: 2;
+    min-height: 85vh;
+}
+
+@media only screen and (max-width:520px) {
+    .app{
+        padding: 6rem 10px 0rem 10px;
+    }
+}

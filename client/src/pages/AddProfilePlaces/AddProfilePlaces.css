@@ -1,0 +1,203 @@
+.place-form-container {
+    padding: 2rem 0;
+}
+
+.form {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--white-light);
+
+    .form-top {
+        display: flex;
+        width: 100%;
+        gap: 10px;
+        align-items: center;
+
+        .image-button {
+            background-color: var(--black-light);
+            padding: 10px 12px;
+            color: var(--white);
+            font-family: var(--secondary-font);
+            font-weight: 300;
+            margin: 0 1rem;
+            font-style: italic;
+            border-radius: 4px;
+            transition: 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--white);
+                color: var(--black)
+            }
+        }
+    }
+
+    .input-feild {
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: var(--box-shadow);
+        padding: 10px;
+
+        & h2 {
+            font-size: 1.75rem;
+            font-family: var(--secondary-font);
+            color: var(--white-light);
+
+            font-weight: 600;
+        }
+
+        & p {
+            color: var(--white);
+            margin: 0px 0px 10px 0px;
+            font-style: italic;
+        }
+
+        & input {
+            width: 100%;
+            font-size: 1rem;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            outline: none;
+        }
+
+        .input-image {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            & label {
+                cursor: pointer;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                padding: 8px;
+                /* color: rgba(0, 0, 0, 0.5); */
+                border-radius: 4px;
+                background-color: rgb(62, 60, 60);
+                /* color:aliceblue */
+                min-width: 160px;
+                width: 100%;
+            }
+
+            .file-upload {
+                display: none;
+            }
+
+            & input {
+                min-width: 150px;
+            }
+
+            & div {
+                background-color: var(--black-light);
+                padding: 8px;
+                border-radius: 4px;
+                cursor: pointer;
+                font-style: italic;
+                color: var(--white);
+                transition: .3s ease;
+
+                &:hover {
+                    background-color: var(--white);
+                    color: var(--black)
+                }
+            }
+        }
+
+        .perks {
+            display: flex;
+            gap: 15px 0;
+            flex-wrap: wrap;
+            padding: 0.25rem 0.75rem;
+
+            & label {
+                display: flex;
+                width: 120px;
+                gap: 8px;
+
+                & input {
+                    scale: 1.75;
+                    width: auto;
+                    accent-color: var(--white-light);
+                }
+            }
+        }
+
+        .number-inputs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 10px;
+
+            & input {
+                width: 48%;
+            }
+
+        }
+
+        .img-span-parent {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 10px 0;
+
+            .img-preview-parent {
+                max-width: 250px;
+                min-width: 200px;
+                display: block;
+                border-radius: 4px;
+
+                .img-span {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+    }
+
+    .submit-form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: var(--white-light);
+        padding: 10px;
+        border-radius: 4px;
+        color: var(--black);
+        font-family: var(--secondary-font);
+        font-weight: 600;
+        margin: 10px 0;
+        cursor: pointer;
+        transition: 0.3s ease;
+
+        &:hover {
+            background-color: var(--white);
+        }
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .form {
+        padding: 2rem 0;
+
+        .input-feild {
+            & h2 {
+                font-size: 1.5rem;
+            }
+
+            & input {
+                font-size: 0.9rem;
+            }
+        }
+
+        .form-top {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.places {
+    display: flex;
+    padding: 2rem 0;
+    justify-content: center;
+    gap: 0 25px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.search-container {
+    width: 100%;
+    padding: 3rem 2rem 0rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & input {
+        font-size: 1.15rem;
+        border-radius: 4px;
+        border: none;
+        box-shadow:  rgba(255, 255, 255, 0.3) 0px 4px 12px 2px;
+        outline: none;
+        padding: 18px;
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .search-container {
+        padding: 2rem 0 0 0;
+
+        & input {
+            width: 90%;
+        }
+    }
+}

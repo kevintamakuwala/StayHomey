@@ -1,0 +1,44 @@
+.shimmer-laptop{
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+    align-items: baseline;
+    display: grid;
+    grid-gap: 0 30px ;
+    grid-auto-rows: min-content;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.shimmer-booking{
+    width: 75%;
+    padding: 20px 0;
+}
+@media only screen and (max-width:1000px) {
+    .shimmer-laptop{
+        flex-direction: column;
+        gap: 10;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .shimmer-booking{
+        width: 80%;
+    }
+}
+@media only screen and (max-width:800px) {
+    .shimmer-laptop{
+        flex-direction: column;
+        gap: 10;
+        grid-template-columns: 1fr 1fr;
+    }
+    .shimmer-booking{
+        width: 90%;
+    }
+}
+@media only screen and (max-width:600px) {
+    .shimmer-laptop{
+        flex-direction: column;
+        gap: 10;
+        grid-template-columns: 1fr;
+    }
+    .shimmer-booking{
+        width: 95%;
+    }
+}

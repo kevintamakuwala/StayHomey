@@ -1,0 +1,204 @@
+.single-place-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+
+    & i {
+        color: var(--white);
+    }
+
+    .top-container {
+        & h1 {
+            font-size: 32px;
+            color: var(--white);
+            font-weight: 600;
+            font-family: var(--secondary-font);
+        }
+
+        & p {
+            color: var(--white-light);
+            font-size: 24px;
+            font-style: italic;
+            display: flex;
+            align-items: center;
+            margin-bottom: 1px;
+        }
+    }
+
+    .middle-container {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+
+        .middle-text {
+            width: 65%;
+            padding: 0 10px;
+
+            .middle-desc {
+                & h2 {
+                    color: var(--white);
+                    font-weight: 600;
+                    font-family: var(--secondary-font);
+                    font-size: 28px;
+                }
+
+                & p {
+                    padding: 10px 0;
+                    color: var(--white-light);
+                    font-size: 18px;
+
+                }
+            }
+
+            .middle-numbers {
+                display: flex;
+                gap: 20px;
+                flex-wrap: wrap;
+                padding: 0.5rem 0;
+                .middle-num {
+                    background-color: var(--white);
+                    padding: 8px 16px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    border-radius: 4px;
+                }
+            }
+        }
+
+        .book-widget {
+            width: 35%;
+        }
+    }
+
+    .bottom-container {
+        padding: 0px 10px;
+
+        .bottom-heading {
+            & h2 {
+                font-size: 28px;
+                color: var(--white);
+                font-family: var(--secondary-font);
+                font-weight: 600;
+            }
+        }
+
+        .bottom-text {
+            font-size: 18px;
+            margin: 10px 0;
+            color: var(--white);
+
+        }
+    }
+
+    .review-container {
+        padding: 0px 10px;
+
+        .bottom-heading {
+            & h2 {
+                font-size: 28px;
+                color: var(--white);
+                text-decoration: underline;
+                text-decoration-color: var(--white-light);
+                text-decoration-thickness: 4px;
+                font-family: var(--secondary-font);
+                font-weight: 600;
+            }
+        }
+
+        .reviews-parent {
+            margin: 10px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+
+            & .review {
+                height: 250px;
+                border-radius: 18px;
+                color: var(--white-light);
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: center;
+                align-items: center;
+                background-color: #f1f1f1;
+
+                & h4 {
+                    padding: 10px;
+                    height: 95%;
+                    font-size: 16px;
+                    font-weight: 400;
+                    width: 90%;
+                    overflow-y: hidden;
+                }
+
+                & div {
+                    background-color: var(--white-light);
+                    width: 10%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .single-place-container {
+        .review-container {
+            .reviews-parent {
+                grid-template-columns: 1fr 1fr;
+
+                & .review {
+                    & h4 {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .single-place-container {
+        .top-container {
+            & h1 {
+                font-size: 28px;
+            }
+
+            & p {
+                font-size: 20px;
+                padding: 0 0 10px 0;
+            }
+        }
+
+        .middle-container {
+            width: 100%;
+            flex-direction: column;
+
+            .middle-text {
+                width: 100%;
+                padding: 0;
+
+                .middle-numbers {
+                    gap: 10px;
+
+                    .middle-num {
+                        padding: 5px 10px;
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .book-widget {
+                width: 100%;
+            }
+
+        }
+
+        .review-container {
+            .reviews-parent {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 60vh;
+    padding: 2rem 0;
+    color: var(--white);
+}
+
+.profile-nav-parent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: var(--black);
+}
+
+.profile-parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 1rem 0;
+
+    & img {
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+
+    }
+
+    & h1 {
+        font-size: 22px;
+    }
+
+    & p {
+        font-size: 18px;
+        background-color: var(--white);
+        color: var(--black);
+        box-shadow: var(--box-shadow);
+        width: 50%;
+        padding: 1rem;
+    }
+
+    .profile-details {
+        overflow: scroll;
+    }
+
+    .logout-btn {
+        background-color: var(--white-light);
+        padding: 10px 0;
+        color: var(--black);
+
+        font-size: 16px;
+        font-family: var(--secondary-font);
+        font-weight: 600;
+        border-radius: 2px;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--white);
+        }
+    }
+}
+
+@media only screen and (max-width:520px) {
+    .profile-parent {
+        & p {
+            width: 90%;
+            font-size: 14px;
+        }
+
+        .logout-btn {
+            width: 90%;
+        }
+    }
+}

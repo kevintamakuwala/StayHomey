@@ -1,0 +1,100 @@
+.otp-parent {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .otp-center {
+        width: 75%;
+        height: 100%;
+        padding: 5rem 0;
+        margin: 10px;
+        background-color: #fff;
+        box-shadow: rgba(1, 1, 1, 0.2) 0px 2px 8px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        .otp-input-parent {
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            & h2 {
+                font-size: 28px;
+                font-weight: 600;
+                text-align: center;
+                color: var(--black);
+            }
+
+            & h3 {
+                font-size: 20px;
+                color: var(--black-light);
+                text-align: center;
+                margin: 5px 0;
+            }
+
+            & p {
+                color: var(--black-light);
+                font-weight: 500;
+            }
+        }
+
+        & button {
+            padding: 10px;
+            max-width: 275px;
+            width: 90%;
+            border: none;
+            background-color: var(--black-light);
+            color: var(--white);
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 2px;
+            font-weight: 400;
+            transition: var(--transition-normal);
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+
+        .otp-input {
+            display: block;
+            border: none;
+            margin: 20px 0;
+            max-width: 275px;
+            width: 90%;
+            font: 2.5rem monospace;
+            border: 1px solid black;
+            color: var(--black);
+            text-align: center;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .otp-parent {
+        .otp-center {
+            width: 100%;
+
+            .otp-input-parent {
+                & h2 {
+                    font-size: 22px;
+                }
+
+                & h3 {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

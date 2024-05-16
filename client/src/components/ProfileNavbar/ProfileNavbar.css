@@ -1,0 +1,57 @@
+.profile-navbar {
+    display: inline-flex;
+    border-radius: 33px;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+
+
+
+    & a {
+        text-decoration: none;
+        /* color: var(--white); */
+        color: var(--black);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        font-weight: 600;
+        font-family: var(--secondary-font);
+        padding: 10px;
+        border-radius: 33px;
+        transition: var(--transition-normal);
+
+        &:hover {
+            background-color: var(--white-light);
+            color: #666464;
+        }
+    }
+
+    .p-active {
+
+        color: var(--white);
+        background-color: var(--black-light);
+    }
+
+    .p-inactive {
+        background-color: var(--white-light);
+        color: var(--black);
+    }
+}
+
+
+@media only screen and (max-width:550px) {
+    .profile-navbar {
+        padding: 2px;
+        gap: 0;
+
+        & a {
+            padding: 8px;
+            border-radius: 33px;
+            font-size: 12px;
+        }
+    }
+}
